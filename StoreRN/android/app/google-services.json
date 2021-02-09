@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "21357384804",
+    "project_id": "storern-f7060",
+    "storage_bucket": "storern-f7060.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21357384804:android:6431460db2ad1a0b9bfb71",
+        "android_client_info": {
+          "package_name": "com.storern"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21357384804-qslkil5pganbsnounui8vrnm4js58dsn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfA07SlAtXmhdog5c0wnlrwCDGglqL9Lk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21357384804-qslkil5pganbsnounui8vrnm4js58dsn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
