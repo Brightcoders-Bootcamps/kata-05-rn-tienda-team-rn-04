@@ -1,12 +1,10 @@
 export const ConstantLogIn = {
-  singInTitle: 'Sing In',
-  singInCreateAccount: 'CREATE ACCOUNT',
+  singIn: 'Sing In',
+  createAccount: 'Create Account',
   routeSingIn: 'LogIn',
   routeSingUp: 'SignUp',
-  singInButton: 'SING IN',
   forgotPass: 'Forgot password?',
   inputEmail: 'Email',
   inputPass: 'Password',
-  singUpButton: 'CREATE ACCOUNT',
-
+  fullName: 'Full Name',
 };

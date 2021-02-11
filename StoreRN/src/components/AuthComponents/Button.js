@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, TouchableOpacity} from 'react-native';
-import {styles} from '../utils/Auth';
+import {styles} from '../../utils/Auth';
 const Button = ({buttonTitle, navigation, RouteToGo}) => {
   return (
     <TouchableOpacity
