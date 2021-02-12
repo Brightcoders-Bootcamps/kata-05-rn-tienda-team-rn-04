@@ -1,16 +1,31 @@
 import React from 'react';
 import {TextInput, View} from 'react-native';
-import {styles, ConstantLogIn} from './../../utils/Auth';
+import {styles} from './../../utils/Auth';
 import AntDesignIcon from 'react-native-vector-icons/AntDesign';
-
-const Input = ({placeholderTxt, iconName}) => {
-    
+import {useInputValue} from '../../hooks';
+const Input = ({
+  placeholderTxt,
+  iconName,
+  userValues,
+  setUserValues,
+  handleChange,
+}) => {
+  const inputValue = useInputValue(iconName, userValues);
   return (
     <View style={styles.input}>
       <AntDesignIcon name={iconName} color="gray" size={25} />
-      <TextInput placeholder={placeholderTxt} placeholderTextColor="black" />
+      <TextInput
+        placeholder={placeholderTxt}
+        placeholderTextColor="black"
+        value={inputValue}
+        onChangeText={(value) => handleChange(userValues, setUserValues, value)}
+        secureTextEntry={placeholderTxt === 'Password' && true}
+      />
     </View>
   );
+};
+const handleChangeName = (userValues, setUserValues, newValue) => {
+  setUserValues({...userValues, name: newValue});
 };
 
 export default Input;

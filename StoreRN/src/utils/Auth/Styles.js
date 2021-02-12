@@ -41,7 +41,7 @@ export const styles = StyleSheet.create({
   input: {
     width: '88%',
     height: windowHeight / 12,
-    padding: 10,
+    padding: 5,
     borderRadius: 15,
     alignItems: 'center',
     marginBottom: 10,
