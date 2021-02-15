@@ -9,7 +9,7 @@ const Button = ({buttonTitle, userValues, signUpFunction, iconName}) => {
   return (
     <TouchableOpacity
       style={styles.btnContainer}
-      onPress={() => signUpFunction('juan@mail.com', '123')}>
+      onPress={() => signUpFunction(userValues.email, userValues.password)}>
       <AntDesignIcon name={iconName} color="white" size={25} style={{marginEnd: 5}}/>
       <Text style={styles.btnText}> {buttonTitle} </Text>
     </TouchableOpacity>

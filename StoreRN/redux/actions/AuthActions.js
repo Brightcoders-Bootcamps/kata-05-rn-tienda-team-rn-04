@@ -39,6 +39,8 @@ export const signUpFunction = (email, password) => {
           dispatch(signUpFailure('That email address is invalid!'));
           console.log('That email address is invalid!');
         }
+
+        console.error(error);
       });
   };
 };
