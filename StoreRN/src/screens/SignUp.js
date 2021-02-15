@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View} from 'react-native';
+import {View, ImageBackground} from 'react-native';
 import {styles, ConstantLogIn} from './../utils/Auth';
 import BtnLogin from './../components/AuthComponents/Button';
 import Title from '../components/AuthComponents/Title';
@@ -16,39 +16,49 @@ const SignUp = ({navigation, signUpFunction}) => {
 
   return (
     <View style={styles.container}>
-      <Title styles={styles.textHeader} title={ConstantLogIn.createAccount} />
-      <InputLogin
-        placeholderTxt={ConstantLogIn.fullName}
-        iconName="user"
-        userValues={userValues}
-        setUserValues={setUserValues}
-        handleChange={AuthFunctions.handleChangeName}
-      />
-      <InputLogin
-        placeholderTxt={ConstantLogIn.inputEmail}
-        iconName="mail"
-        userValues={userValues}
-        setUserValues={setUserValues}
-        handleChange={AuthFunctions.handleChangEmail}
-      />
-      <InputLogin
-        placeholderTxt={ConstantLogIn.inputPass}
-        iconName="lock"
-        userValues={userValues}
-        setUserValues={setUserValues}
-        handleChange={AuthFunctions.handleChangePassword}
-      />
-      <BtnLogin
-        RouteToGo="LogIn"
-        buttonTitle={ConstantLogIn.createAccount}
-        handleSubmit={signUpFunction}
-        userValues={userValues}
-      />
-      <Message
-        RouteToGo={ConstantLogIn.routeSingIn}
-        navigation={navigation}
-        message={ConstantLogIn.singIn}
-      />
+      <View>
+        <ImageBackground source={require ('../utils/Images/supermarket.jpeg')} style={styles.Background}></ImageBackground> 
+      </View>
+      <View style={styles.containerAccount}>
+        <Title styles={styles.textHeader} title={ConstantLogIn.createAccount} />
+        <View style={styles.containerInputs}>
+          <InputLogin
+            placeholderTxt={ConstantLogIn.fullName}
+            iconName="user"
+            userValues={userValues}
+            setUserValues={setUserValues}
+            handleChange={AuthFunctions.handleChangeName}
+          />
+          <InputLogin
+            placeholderTxt={ConstantLogIn.inputEmail}
+            iconName="mail"
+            userValues={userValues}
+            setUserValues={setUserValues}
+            handleChange={AuthFunctions.handleChangEmail}
+           />
+          <InputLogin
+            placeholderTxt={ConstantLogIn.inputPass}
+            iconName="lock"
+            userValues={userValues}
+            setUserValues={setUserValues}
+            handleChange={AuthFunctions.handleChangePassword}
+          />
+          </View>
+          <BtnLogin
+            RouteToGo="LogIn"
+            iconName="arrowright"
+            buttonTitle={ConstantLogIn.createAccount}
+            handleSubmit={signUpFunction}
+            userValues={userValues}
+          />
+      </View>
+      <View style={styles.containerMessage}>
+        <Message
+          RouteToGo={ConstantLogIn.routeSingIn}
+          navigation={navigation}
+          message={ConstantLogIn.singIn}
+        /> 
+      </View> 
     </View>
   );
 };

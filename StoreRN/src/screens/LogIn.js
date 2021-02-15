@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View} from 'react-native';
+import {View,ImageBackground,Text} from 'react-native';
 import BtnLogin from './../components/AuthComponents/Button';
 import InputLogin from './../components/AuthComponents/Input';
 import {styles, ConstantLogIn} from './../utils/Auth';
@@ -13,30 +13,41 @@ const LogIn = ({navigation}) => {
   });
   return (
     <View style={styles.container}>
-      <Title styles={styles.textHeader} title={ConstantLogIn.singIn} />
-      <InputLogin
-        placeholderTxt={ConstantLogIn.inputEmail}
-        iconName="mail"
-        userValues={userValues}
-        setUserValues={setUserValues}
-        handleChange={AuthFunctions.handleChangEmail}
-      />
-      <InputLogin
-        placeholderTxt={ConstantLogIn.inputPass}
-        iconName="lock"
-        userValues={userValues}
-        setUserValues={setUserValues}
-        handleChange={AuthFunctions.handleChangePassword}
-      />
-      <BtnLogin
-        RouteToGo={ConstantLogIn.routeSingIn}
-        buttonTitle={ConstantLogIn.singIn}
-      />
-      <Message
-        RouteToGo={ConstantLogIn.routeSingUp}
-        navigation={navigation}
-        message={ConstantLogIn.createAccount}
-      />
+      <View>
+        <ImageBackground source={require ('../utils/Images/supermarket.jpeg')} style={styles.Background}></ImageBackground> 
+      </View>
+      <View style={styles.containerAccount}>
+        <Title styles={styles.textHeader} title={ConstantLogIn.singIn} />
+        <View style={styles.containerInputs}>
+         <InputLogin
+            placeholderTxt={ConstantLogIn.inputEmail}
+            iconName="mail"
+            userValues={userValues}
+            setUserValues={setUserValues}
+            handleChange={AuthFunctions.handleChangEmail}
+          />
+          <InputLogin
+            placeholderTxt={ConstantLogIn.inputPass}
+            iconName="lock"
+            userValues={userValues}
+            setUserValues={setUserValues}
+            handleChange={AuthFunctions.handleChangePassword}
+          />
+          <Text style={styles.textForgotPass}>{ConstantLogIn.forgotPass}</Text>
+        </View>
+        <BtnLogin
+          RouteToGo={ConstantLogIn.routeSingIn}
+          buttonTitle={ConstantLogIn.singIn}
+          iconName="arrowright"
+        />
+      </View>
+      <View style={styles.containerMessage}>
+        <Message
+          RouteToGo={ConstantLogIn.routeSingUp}
+          navigation={navigation}
+          message={ConstantLogIn.createAccount}
+        />
+      </View>
     </View>
   );
 };

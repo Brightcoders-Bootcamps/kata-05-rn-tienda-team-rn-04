@@ -13,10 +13,11 @@ const Input = ({
   const inputValue = useInputValue(iconName, userValues);
   return (
     <View style={styles.input}>
-      <AntDesignIcon name={iconName} color="gray" size={25} />
+      <AntDesignIcon name={iconName} color="gray" size={25} style={{marginStart: 15}} />
       <TextInput
         placeholder={placeholderTxt}
-        placeholderTextColor="black"
+        placeholderTextColor="gray"
+        style={styles.textInput}
         value={inputValue}
         onChangeText={(value) => handleChange(userValues, setUserValues, value)}
         secureTextEntry={placeholderTxt === 'Password' && true}
