@@ -7,4 +7,7 @@ export const ConstantLogIn = {
   inputEmail: 'Email',
   inputPass: 'Password',
   fullName: 'Full Name',
+  titleStar: 'Vegezone',
+  routeStart: 'LogIn',
+  letsShop: 'Let´s Shop',
 };

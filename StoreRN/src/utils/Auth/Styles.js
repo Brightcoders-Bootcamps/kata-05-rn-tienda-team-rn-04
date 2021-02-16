@@ -20,6 +20,11 @@ export const styles = StyleSheet.create({
     color: colors.white,
     textTransform: 'uppercase'
   },
+  btnLargeText: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: colors.white,
+  },
   container: {
    flex:1,
    backgroundColor: colors.green
@@ -88,9 +93,40 @@ export const styles = StyleSheet.create({
   },
   textForgotPass:{
     color:colors.gray
-  }
-
+  },
+  btnLargeContainer:{
+    backgroundColor: colors.lightGreen,
+    width: '100%',
+    height: 40,
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  containerLetsShop:{
+    width: '100%',
+    height: '100%',
+    justifyContent:'space-around',
+    alignItems:'center'
+  },
+  titleStart:{
+    color: colors.white,
+    fontSize:45,
+    fontFamily: 'Courgette-Regular',
+  },
+  containerLogo:{
+    backgroundColor: colors.white,
+    borderRadius:100,
+    width: 120,
+    height:120,
+    justifyContent:'center',
+    alignItems:'center',
+    marginTop: 30
+  },
+  imageStart:{
+    width:115,
+    height:115
+  },
+  titleLogo:{
+    justifyContent:'center',
+    alignItems: 'center'
+  },
 });
-
-
-

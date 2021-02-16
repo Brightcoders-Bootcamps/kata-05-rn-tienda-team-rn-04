@@ -6,6 +6,7 @@ import {styles, ConstantLogIn} from './../utils/Auth';
 import Title from '../components/AuthComponents/Title';
 import Message from '../components/AuthComponents/Message';
 import {AuthFunctions} from '../utils/functions';
+
 const LogIn = ({navigation}) => {
   const [userValues, setUserValues] = useState({
     email: '',

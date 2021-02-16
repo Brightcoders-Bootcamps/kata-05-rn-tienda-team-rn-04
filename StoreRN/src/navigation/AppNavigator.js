@@ -1,7 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 const Stack = createStackNavigator();
-import {View, Text} from 'react-native';
+import {Text} from 'react-native';
 const sss = () => {
   return <Text>Bienvenido!</Text>;
 };
