@@ -1,12 +1,19 @@
 import React from 'react';
 import AuthNavigator from './navigation/AuthNavigator';
+import AppNavigator from './navigation/AppNavigator';
 import {NavigationContainer} from '@react-navigation/native';
-const Index = () => {
+import {userSelector} from './utils/selectors';
+import {connect} from 'react-redux';
+const Index = ({User}) => {
   return (
     <NavigationContainer>
-      <AuthNavigator />
+      {!User ? <AuthNavigator /> : <AppNavigator />}
     </NavigationContainer>
   );
 };
-
-export default Index;
+const mapStateToProps = (state) => {
+  return {
+    User: userSelector(state),
+  };
+};
+export default connect(mapStateToProps, null)(Index);

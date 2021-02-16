@@ -1,2 +1,2 @@
-export * from './ConstantLogIn'
-export * from './Styles'
+export * from './ConstantLogIn';
+export * from './Styles';

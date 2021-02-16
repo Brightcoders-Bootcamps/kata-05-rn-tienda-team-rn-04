@@ -1,20 +1,64 @@
-import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
-import {styles, ConstantLogIn} from '../utils/Auth';
-import BtnLogin from './../components/Button';
+import React, {useState} from 'react';
+import {View, ImageBackground} from 'react-native';
+import {styles, ConstantLogIn} from './../utils/Auth';
+import BtnLogin from './../components/AuthComponents/Button';
+import Title from '../components/AuthComponents/Title';
+import Message from '../components/AuthComponents/Message';
+import InputLogin from './../components/AuthComponents/Input';
+import {AuthFunctions} from '../utils/functions';
 
 const SignUp = ({navigation}) => {
+  const [userValues, setUserValues] = useState({
+    name: '',
+    email: '',
+    password: '',
+  });
+
   return (
     <View style={styles.container}>
-      <BtnLogin
-        navigation={navigation}
-        RouteToGo="LogIn"
-        buttonTitle={ConstantLogIn.singUpButton}
-      />
-      <TouchableOpacity
-        onPress={() => navigation.navigate(ConstantLogIn.routeSingIn)}>
-        <Text>{ConstantLogIn.singInTitle}</Text>
-      </TouchableOpacity>
+      <View>
+        <ImageBackground
+          source={require('../utils/Images/supermarket.jpeg')}
+          style={styles.Background}></ImageBackground>
+      </View>
+      <View style={styles.containerAccount}>
+        <Title styles={styles.textHeader} title={ConstantLogIn.createAccount} />
+        <View style={styles.containerInputs}>
+          <InputLogin
+            placeholderTxt={ConstantLogIn.fullName}
+            iconName="user"
+            userValues={userValues}
+            setUserValues={setUserValues}
+            handleChange={AuthFunctions.handleChangeName}
+          />
+          <InputLogin
+            placeholderTxt={ConstantLogIn.inputEmail}
+            iconName="mail"
+            userValues={userValues}
+            setUserValues={setUserValues}
+            handleChange={AuthFunctions.handleChangEmail}
+          />
+          <InputLogin
+            placeholderTxt={ConstantLogIn.inputPass}
+            iconName="lock"
+            userValues={userValues}
+            setUserValues={setUserValues}
+            handleChange={AuthFunctions.handleChangePassword}
+          />
+        </View>
+        <BtnLogin
+          iconName="arrowright"
+          buttonTitle={ConstantLogIn.createAccount}
+          userValues={userValues}
+        />
+      </View>
+      <View style={styles.containerMessage}>
+        <Message
+          RouteToGo={ConstantLogIn.routeSingIn}
+          navigation={navigation}
+          message={ConstantLogIn.singIn}
+        />
+      </View>
     </View>
   );
 };
