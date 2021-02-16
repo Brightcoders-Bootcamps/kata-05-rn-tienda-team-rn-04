@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View,ImageBackground,Text} from 'react-native';
+import {View, ImageBackground, Text} from 'react-native';
 import BtnLogin from './../components/AuthComponents/Button';
 import InputLogin from './../components/AuthComponents/Input';
 import {styles, ConstantLogIn} from './../utils/Auth';
@@ -15,12 +15,14 @@ const LogIn = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View>
-        <ImageBackground source={require ('../utils/Images/supermarket.jpeg')} style={styles.Background}></ImageBackground> 
+        <ImageBackground
+          source={require('../utils/Images/supermarket.jpeg')}
+          style={styles.Background}></ImageBackground>
       </View>
       <View style={styles.containerAccount}>
         <Title styles={styles.textHeader} title={ConstantLogIn.singIn} />
         <View style={styles.containerInputs}>
-         <InputLogin
+          <InputLogin
             placeholderTxt={ConstantLogIn.inputEmail}
             iconName="mail"
             userValues={userValues}
@@ -37,7 +39,7 @@ const LogIn = ({navigation}) => {
           <Text style={styles.textForgotPass}>{ConstantLogIn.forgotPass}</Text>
         </View>
         <BtnLogin
-          RouteToGo={ConstantLogIn.routeSingIn}
+          userValues={userValues}
           buttonTitle={ConstantLogIn.singIn}
           iconName="arrowright"
         />
