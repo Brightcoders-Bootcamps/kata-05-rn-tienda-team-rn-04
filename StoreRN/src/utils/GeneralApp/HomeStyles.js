@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 import {windowHeight, windowWidth} from './../Dimensions';
 import {colors} from './../colors';
 
-export const styles = StyleSheet.create({
+export const HomeStyles = StyleSheet.create({
   homeContainer: {
     flex: 1,
     backgroundColor: colors.green,
@@ -45,9 +45,5 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     padding: 20,
-  },
-  bottomIcons: {
-    color: colors.gray,
-    fontSize: 30,
-  },
+  }
 });
