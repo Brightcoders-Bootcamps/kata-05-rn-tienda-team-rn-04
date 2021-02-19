@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, ImageBackground, TouchableOpacity} from 'react-native';
-import {HomeStyles, Constants} from './../utils/GeneralApp';
+import {HomeStyles, ItemStyles, Constants} from './../utils/GeneralApp';
 import Icon from '../components/HomeComponents/Icon';
 import {colors} from '../utils/colors';
 import ItemList from '../components/HomeComponents/ItemsList';
@@ -29,7 +29,7 @@ const Home = () => {
           />
         </View>
 
-        <View style={HomeStyles.itemContainer}>
+        <View style={ItemStyles.itemContainer}>
           <ItemList/>
         </View>
 

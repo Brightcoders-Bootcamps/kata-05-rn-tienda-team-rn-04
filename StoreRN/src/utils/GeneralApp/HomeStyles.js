@@ -28,14 +28,6 @@ export const HomeStyles = StyleSheet.create({
     flexDirection: 'row',
     padding: 20,
   },
-  itemContainer: {
-    backgroundColor: colors.white,
-    width: '100%',
-    height: '70%',
-    alignItems: 'center',
-    borderTopLeftRadius: 40,
-    borderTopRightRadius: 40,
-  },
   bottomIconsContainer: {
     backgroundColor: colors.white,
     width: '100%',

@@ -1,15 +1,23 @@
 import React from 'react';
-import {TouchableOpacity, FlatList, Text} from 'react-native';
+import {TouchableOpacity, FlatList, Text, Image} from 'react-native';
 import {Constants} from '../../utils/GeneralApp'
-
+import {ItemStyles} from '../../utils/GeneralApp'
 const ItemsList = () => {
   return (
-   <FlatList 
+   <FlatList
+    numColumns={3}
+    horizontal={false}
+    style={ItemStyles.itemList} 
     data={Constants.data}
     keyExtractor={item => item.id}
     renderItem={({item})=>(
-        <TouchableOpacity>
-           <Text>{item.name} </Text>
+        <TouchableOpacity style={ItemStyles.item}>
+          <Image source={{uri: item.img}} style={{width: 60, height: 60}} />
+          <Text style={ItemStyles.textItem}>{item.name} </Text>
+          <Text style={ItemStyles.textItem}>{item.price}</Text>
+          <TouchableOpacity style={ItemStyles.addBtn}>
+              <Text style={ItemStyles.textBtn}>{Constants.AddToCart}</Text>
+          </TouchableOpacity>
         </TouchableOpacity>
     )}
    />

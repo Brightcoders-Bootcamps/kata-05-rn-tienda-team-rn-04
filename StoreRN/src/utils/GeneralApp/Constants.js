@@ -3,63 +3,64 @@ export const Constants = {
   data: [
     {
       id: '1',
-      img: require('../../assets/img/fresa.jpeg'),
+      img: 'https://www.pngarts.com/files/3/Strawberry-PNG-Free-Download.png',
       name: 'Strawberry',
       price: '$25',
     },
     {
       id: '2',
-      img: require('../../assets/img/manzana.jpg'),
+      img: 'https://freepngimg.com/thumb/apple_fruit/24632-1-apple-fruit-transparent.png',
       name: 'Apple',
       price: '$15',
     },
     {
       id: '3',
-      img: require('../../assets/img/naranja.jpeg'),
+      img: 'https://purepng.com/public/uploads/large/purepng.com-orange-orangeorangefruitbitter-orangeorangesclip-art-17015273374288pjtg.png',
       name: 'Orange',
       price: '$10',
     },
     {
       id: '4',
-      img: require('../../assets/img/platano.jpeg'),
+      img: 'https://cdn.pixabay.com/photo/2016/02/23/17/29/banana-1218133_960_720.png',
       name: 'Banana',
       price: '$10',
     },
     {
       id: '5',
-      img: require('../../assets/img/uvas.jpeg'),
+      img: 'https://www.freepnglogos.com/uploads/grapes-png/grapes-dimidwa-12.png',
       name: 'Grapes',
       price: '$20',
     },
     {
       id: '6',
-      img: require('../../assets/img/fresa.jpeg'),
+      img: 'https://www.pngarts.com/files/3/Strawberry-PNG-Free-Download.png',
       name: 'Strawberry',
       price: '$25',
     },
     {
       id: '7',
-      img: require('../../assets/img/manzana.jpg'),
+      img: 'https://freepngimg.com/thumb/apple_fruit/24632-1-apple-fruit-transparent.png',
       name: 'Apple',
       price: '$15',
     },
     {
       id: '8',
-      img: require('../../assets/img/naranja.jpeg'),
+      img: 'https://purepng.com/public/uploads/large/purepng.com-orange-orangeorangefruitbitter-orangeorangesclip-art-17015273374288pjtg.png',
       name: 'Orange',
       price: '$10',
     },
     {
       id: '9',
-      img: require('../../assets/img/platano.jpeg'),
+      img: 'https://cdn.pixabay.com/photo/2016/02/23/17/29/banana-1218133_960_720.png',
       name: 'Banana',
       price: '$10',
     },
     {
       id: '10',
-      img: require('../../assets/img/uvas.jpeg'),
+      img: 'https://www.freepnglogos.com/uploads/grapes-png/grapes-dimidwa-12.png',
       name: 'Grapes',
       price: '$20',
-    },
+    }
   ],
+  AddToCart: 'Add to cart'
 };
