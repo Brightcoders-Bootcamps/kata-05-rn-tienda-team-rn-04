@@ -19,6 +19,15 @@ export const HomeStyles = StyleSheet.create({
     fontWeight: 'bold',
     color: colors.white,
   },
+  homeTitleGray: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: colors.gray,
+  },
+  containerDetail:{
+    width: windowWidth,
+    height: windowHeight
+  },
   headerContainer: {
     width: '100%',
     height: '15%',
@@ -37,5 +46,59 @@ export const HomeStyles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     padding: 20,
-  }
+  },
+  counter: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    marginLeft:'15%',
+    alignItems:'center',
+  },
+  textCounter:{
+    marginHorizontal:20,
+    color: colors.gray,
+    fontSize:14,
+  },
+  imageDetail:{
+    width:'80%',
+    height:150,
+    borderRadius:10,
+    backgroundColor:'transparent'
+  },
+  imageContainerDetail:{
+    justifyContent: 'center',
+    alignItems:'center',
+    height:'28%'
+  },
+  imageShadow:{
+    width:'80%',
+    height:'90%',
+    justifyContent:'center',
+    alignItems:'center',
+    elevation: 7,
+    borderColor: colors.ligthGray,
+    borderRadius:10,
+    backgroundColor: 'transparent',
+  },
+  itemName:{
+    color:colors.darkGray,
+    fontSize:16,
+    marginLeft:'10%'
+  },
+  itemPrice:{
+    color:colors.gray,
+    fontSize:14,
+    marginBottom: 20,
+    marginLeft:'10%'
+  },
+  textDetail:{
+    height:'35%',
+  },
+  textLorem:{
+    color:colors.gray,
+    fontSize:12,
+    marginHorizontal:'10%',
+    textAlign:'justify',
+    marginBottom: 30
+  },
+
 });

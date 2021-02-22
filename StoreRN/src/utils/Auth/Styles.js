@@ -25,6 +25,10 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: colors.white,
   },
+  btnLargeDetailText: {
+    fontSize: 16,
+    color: colors.white,
+  },
   container: {
    flex:1,
    backgroundColor: colors.green
@@ -98,6 +102,13 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.lightGreen,
     width: '100%',
     height: 40,
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  btnLargeDetailContainer:{
+    backgroundColor: colors.lightGreen,
+    width: '100%',
+    height: 50,
     justifyContent:'center',
     alignItems:'center'
   },

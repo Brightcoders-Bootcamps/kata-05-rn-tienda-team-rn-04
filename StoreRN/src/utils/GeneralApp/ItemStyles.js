@@ -14,7 +14,7 @@ export const ItemStyles = StyleSheet.create({
       },
       itemList: {
           width:'100%',
-          height: '10%'
+          height: '10%',
       },
       item:{
         marginHorizontal: 7,
@@ -25,7 +25,8 @@ export const ItemStyles = StyleSheet.create({
         borderColor: colors.ligthGray,
         padding: 10,
         width:'30%',
-        // borderRadius: 
+        borderRadius: 5,
+        
       },
       addBtn:{
         padding: 5,
