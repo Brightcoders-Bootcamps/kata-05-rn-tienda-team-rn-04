@@ -1,7 +1,6 @@
 import React from 'react';
-import {View, Text, ImageBackground, TouchableOpacity} from 'react-native';
+import {View, Text, ImageBackground} from 'react-native';
 import {HomeStyles, ItemStyles, Constants} from './../utils/GeneralApp';
-import Icon from '../components/HomeComponents/Icon';
 import {colors} from '../utils/colors';
 import ItemList from '../components/HomeComponents/ItemsList';
 import Header from '../components/HomeComponents/Header';
@@ -14,15 +13,17 @@ const Home = ({navigation}) => {
         <ImageBackground
           source={require('./../utils/Images/supermarket.jpeg')}
           style={HomeStyles.homeBackground}></ImageBackground>
-        
-        <Header colorIcons={colors.white} title={Constants.Home} styleTitle={HomeStyles.homeTitle}/>
-        
+        <Header
+          colorIcons={colors.white}
+          title={Constants.Home}
+          styleTitle={HomeStyles.homeTitle}
+          navigation={navigation}
+        />
         <View style={ItemStyles.itemContainer}>
           <ItemList navigation={navigation} />
         </View>
 
-        <Bottom/>
-
+        <Bottom />
       </View>
     </View>
   );

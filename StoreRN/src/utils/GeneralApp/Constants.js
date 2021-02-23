@@ -67,4 +67,5 @@ export const Constants = {
   titleButtonCart: 'Add to cart',
   Details: 'Details',
   Home: 'Home',
+  vegetablely: 'Vegetablely'
 };

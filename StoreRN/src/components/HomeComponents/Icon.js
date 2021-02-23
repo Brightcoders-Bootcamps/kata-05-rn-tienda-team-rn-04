@@ -1,10 +1,18 @@
 import React from 'react';
 import {TouchableOpacity} from 'react-native';
-import {useIconMenu} from '../../hooks'
+import {useIconMenu} from '../../hooks';
 
-const Icon = ({iconName, handlePress, iconLibrary, iconSize, iconColor}) => {
+const Icon = ({
+  iconName,
+  navigation,
+  RouteToGo,
+  iconLibrary,
+  iconSize,
+  iconColor,
+}) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity
+      onPress={RouteToGo ? () => navigation.openDrawer() : null}>
       {useIconMenu(iconName, iconLibrary, iconSize, iconColor)}
     </TouchableOpacity>
   );

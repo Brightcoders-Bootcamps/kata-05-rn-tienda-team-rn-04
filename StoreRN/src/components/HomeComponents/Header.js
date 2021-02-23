@@ -4,7 +4,7 @@ import Icon from './Icon';
 import {colors} from '../../utils/colors';
 import {HomeStyles, Constants} from '../../utils/GeneralApp';
 
-const Header = ({colorIcons, title, styleTitle}) => {
+const Header = ({colorIcons, title, styleTitle, navigation}) => {
     return(
         <View style={HomeStyles.headerContainer}>
         <Icon
@@ -12,6 +12,8 @@ const Header = ({colorIcons, title, styleTitle}) => {
           iconLibrary="FontAwesome5"
           iconSize={35}
           iconColor={colorIcons}
+          navigation={navigation}
+          RouteToGo={'Drawer'}
         />
         <Text style={styleTitle}>{title}</Text>
         <Icon

@@ -5,6 +5,9 @@ import {
   SIGN_IN,
   SIGN_IN_FAILURE,
   SIGN_IN_SUCCESS,
+  LOG_OUT,
+  LOG_OUT_FAILURE,
+  LOG_OUT_SUCCESS,
 } from '../actions/types';
 const initialState = {
   user: null,
@@ -36,7 +39,18 @@ function AuthReducer(state = initialState, action) {
         user: null,
         message: action.payload,
       };
-
+    case LOG_OUT:
+      return state;
+    case LOG_OUT_SUCCESS:
+      return {
+        user: null,
+        message: '',
+      };
+    case LOG_OUT_FAILURE:
+      return {
+        ...state,
+        message: action.payload,
+      };
     default:
       return state;
   }

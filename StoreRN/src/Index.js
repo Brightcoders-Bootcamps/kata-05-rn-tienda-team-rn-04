@@ -1,13 +1,13 @@
 import React from 'react';
 import AuthNavigator from './navigation/AuthNavigator';
-import AppNavigator from './navigation/AppNavigator';
+import DrawerNavigator from './navigation/DrawerNavigator';
 import {NavigationContainer} from '@react-navigation/native';
 import {userSelector} from './utils/selectors';
 import {connect} from 'react-redux';
 const Index = ({User}) => {
   return (
     <NavigationContainer>
-      {!User ? <AuthNavigator /> : <AppNavigator />}
+      {!User ? <AuthNavigator /> : <DrawerNavigator />}
     </NavigationContainer>
   );
 };
