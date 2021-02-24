@@ -110,7 +110,9 @@ export const styles = StyleSheet.create({
     width: '100%',
     height: 50,
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+    padding: 5,
+    marginTop: 23
   },
   containerLetsShop:{
     width: '100%',

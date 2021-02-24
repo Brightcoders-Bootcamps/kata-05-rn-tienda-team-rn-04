@@ -6,7 +6,7 @@ import {HomeStyles, Constants} from '../../utils/GeneralApp';
 
 const Header = ({colorIcons, title, styleTitle, navigation}) => {
     return(
-        <View style={HomeStyles.headerContainer}>
+        <View style={[HomeStyles.headerContainer, {height: title === 'Home' ? '15%' : '9%'}]}>
         <Icon
           iconName="bars"
           iconLibrary="FontAwesome5"

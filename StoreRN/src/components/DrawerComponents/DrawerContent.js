@@ -20,12 +20,11 @@ const DrawerContent = (props) => {
         onPress={() => props.navigation.closeDrawer()}>
         {useIconMenu('menu', 'Entypo', 30, '#FFF')}
       </TouchableOpacity>
-
       <DrawerItem
         label={() => (
           <Item
             navigation={props.navigation}
-            RouteToGo="Home"
+            RouteToGo="Home_1"
             title={'Home'}
             iconName="home"
             iconLibrary="Entypo"
@@ -37,7 +36,9 @@ const DrawerContent = (props) => {
       <DrawerItem
         label={() => (
           <Item
+            navigation={props.navigation}
             title={'My Order'}
+            RouteToGo="MyOrder"
             iconName="shoppingcart"
             iconLibrary="AntDesign"
             iconSize={25}

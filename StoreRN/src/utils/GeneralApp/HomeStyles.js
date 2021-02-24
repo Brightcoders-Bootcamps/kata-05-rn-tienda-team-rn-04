@@ -30,7 +30,6 @@ export const HomeStyles = StyleSheet.create({
   },
   headerContainer: {
     width: '100%',
-    height: '15%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -99,6 +98,18 @@ export const HomeStyles = StyleSheet.create({
     marginHorizontal:'10%',
     textAlign:'justify',
     marginBottom: 30
+  },
+  textSubtotal:{
+    color:colors.white,
+    fontWeight: 'bold',
+    fontSize: 16
+  },
+  containerSubtotal:{
+    flexDirection:'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginHorizontal: 20,
+    marginBottom: 20
   },
 
 });

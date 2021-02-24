@@ -6,7 +6,7 @@ const ButtonLarge = ({navigation, RouteGo, buttonTitle}) => {
     return (
       <TouchableOpacity
         style={styles.btnLargeDetailContainer}
-        onPress={() => console.log('cool')}>
+        onPress={() => navigation.navigate(RouteGo)}>
         <Text style={styles.btnLargeDetailText}> {buttonTitle} </Text>
       </TouchableOpacity>
     );
