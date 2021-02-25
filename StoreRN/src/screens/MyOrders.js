@@ -1,13 +1,13 @@
 import React from 'react';
-import {View, Text, ImageBackground} from 'react-native';
-import {HomeStyles, ItemStyles, Constants} from './../utils/GeneralApp';
+import {View, Text, ImageBackground, TouchableOpacity} from 'react-native';
+import {HomeStyles, ItemStyles, Constants, } from './../utils/GeneralApp';
 import {colors} from '../utils/colors';
 import ItemList from '../components/HomeComponents/ItemsListMyOrder';
 import Header from '../components/HomeComponents/Header';
 import Bottom from '../components/HomeComponents/Bottom';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const Home = ({navigation}) => {
+
+const MyOrder = ({navigation}) => {
   return (
     <View style={HomeStyles.homeContainer}>
       <View>
@@ -22,7 +22,7 @@ const Home = ({navigation}) => {
         />
         <View style={HomeStyles.containerSubtotal}>
           <Text style={HomeStyles.textSubtotal}>SubTotal = 132$</Text>
-          <TouchableOpacity style={ItemStyles.checkOutBtn}>
+          <TouchableOpacity style={ItemStyles.checkOutBtn} onPress={() => navigation.navigate('OrderPlaced')}>
                 <Text style={ItemStyles.textBtnCheckout}>{Constants.checkOutTitle}</Text>
           </TouchableOpacity>
         </View>
@@ -35,4 +35,4 @@ const Home = ({navigation}) => {
   );
 };
 
-export default Home;
+export default MyOrder;

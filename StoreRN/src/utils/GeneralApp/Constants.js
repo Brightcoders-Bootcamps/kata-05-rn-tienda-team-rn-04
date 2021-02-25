@@ -69,5 +69,7 @@ export const Constants = {
   Home: 'Home',
   vegetablely: 'Vegetablely',
   titleMyOrder: 'My Order',
-  checkOutTitle: 'Check Out Now'
+  checkOutTitle: 'Check Out Now',
+  orderPlaced: 'Order Placed.',
+  orderNumber: 'Your order number is'
 };

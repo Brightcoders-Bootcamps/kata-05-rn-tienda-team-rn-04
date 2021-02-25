@@ -1,8 +1,11 @@
 import React from 'react';
 import {TouchableOpacity, FlatList, Text, Image, View} from 'react-native';
 import {Constants} from '../../utils/GeneralApp'
-import {ItemStyles} from '../../utils/GeneralApp'
-const ItemsList = ({navigation}) => {
+import {ItemStyles} from '../../utils/GeneralApp';
+import {add_product} from "../../../redux/actions/ProductsActions";
+import {connect} from 'react-redux';
+
+const ItemsList = ({navigation, add_product}) => {
   return (
    <FlatList
     numColumns={3}
@@ -15,7 +18,7 @@ const ItemsList = ({navigation}) => {
             <Image source={{uri: item.img}} style={{width: 60, height: 60}} />
             <Text style={ItemStyles.textItem}>{item.name} </Text>
             <Text style={ItemStyles.textItem}>{item.price}</Text>
-            <TouchableOpacity style={ItemStyles.addBtn}>
+            <TouchableOpacity style={ItemStyles.addBtn} onPress={() => add_product(item)} >
                 <Text style={ItemStyles.textBtn}>{Constants.AddToCart}</Text>
             </TouchableOpacity>
         </TouchableOpacity>
@@ -24,4 +27,7 @@ const ItemsList = ({navigation}) => {
   );
 };
 
-export default ItemsList
+const mapDispatchToProps = {
+    add_product
+}
+export default connect(null, mapDispatchToProps)(ItemsList);

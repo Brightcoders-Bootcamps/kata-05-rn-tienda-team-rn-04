@@ -6,6 +6,7 @@ import ItemList from '../components/HomeComponents/ItemsList';
 import Header from '../components/HomeComponents/Header';
 import Bottom from '../components/HomeComponents/Bottom';
 
+
 const Home = ({navigation}) => {
   return (
     <View style={HomeStyles.homeContainer}>
@@ -28,5 +29,6 @@ const Home = ({navigation}) => {
     </View>
   );
 };
+
 
 export default Home;

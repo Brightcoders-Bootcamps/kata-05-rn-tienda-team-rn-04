@@ -5,9 +5,12 @@ import Header from '../components/HomeComponents/Header';
 import Bottom from '../components/HomeComponents/Bottom';
 import {HomeStyles, Constants} from '../utils/GeneralApp';
 import ButtonCart from '../components/HomeComponents/ButtonLarge';
-import Icon from '../components/HomeComponents/IconCounter'
-import {handleCount} from '../utils/functions'
-const Details = ({route, navigation}) => {
+import Icon from '../components/HomeComponents/IconCounter';
+import {handleCount} from '../utils/functions';
+import {add_product} from "../../redux/actions/ProductsActions";
+import {connect} from 'react-redux';
+
+const Details = ({route, navigation, add_product}) => {
     const item = route.params
     const [count, setCount] = useState(0);
     return (
@@ -40,10 +43,14 @@ const Details = ({route, navigation}) => {
                     />
                 </View>
             </View>
-            <ButtonCart buttonTitle={Constants.titleButtonCart} RouteGo={'MyOrder'} navigation={navigation} />
+            <ButtonCart  buttonTitle={Constants.titleButtonCart} RouteGo={'Home'} navigation={navigation} item={item} add_product={add_product} count={count} />
             <Bottom/>
         </View>
     )
+};
+
+const mapDispatchToProps = {
+    add_product
 }
 
-export default Details
+export default connect(null, mapDispatchToProps)(Details);

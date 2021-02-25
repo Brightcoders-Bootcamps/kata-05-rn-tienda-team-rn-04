@@ -7,3 +7,5 @@ export const SIGN_IN_FAILURE = 'SIGN_IN_FAILURE';
 export const LOG_OUT = 'LOG_OUT';
 export const LOG_OUT_SUCCESS = 'LOG_OUT_SUCCESS';
 export const LOG_OUT_FAILURE = 'LOG_OUT_FAILURE';
+export const ADD_PRODUCT = 'ADD_PRODUCT';
+export const DELETE_PRODUCT = 'DELETE_PRODUCT'
