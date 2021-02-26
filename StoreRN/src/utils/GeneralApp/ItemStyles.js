@@ -12,6 +12,15 @@ export const ItemStyles = StyleSheet.create({
         borderTopRightRadius: 40,
         alignItems: 'center'
       },
+      itemContainerOrder: {
+        backgroundColor: colors.white,
+        width: '100%',
+        height: '68%',
+        padding: 15,
+        borderTopLeftRadius: 40,
+        borderTopRightRadius: 40,
+        alignItems: 'center'
+      },
       itemList: {
           width:'100%',
           height: '10%',

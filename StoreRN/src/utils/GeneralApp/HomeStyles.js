@@ -111,5 +111,10 @@ export const HomeStyles = StyleSheet.create({
     marginHorizontal: 20,
     marginBottom: 20
   },
-
+  noOrdersText: {
+    color: colors.green,
+    fontSize: 35,
+    fontWeight: 'bold',
+    marginVertical: 20
+  }
 });
