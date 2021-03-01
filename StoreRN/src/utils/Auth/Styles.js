@@ -25,6 +25,10 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: colors.white,
   },
+  btnLargeDetailText: {
+    fontSize: 16,
+    color: colors.white,
+  },
   container: {
    flex:1,
    backgroundColor: colors.green
@@ -101,6 +105,15 @@ export const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems:'center'
   },
+  btnLargeDetailContainer:{
+    backgroundColor: colors.lightGreen,
+    width: '100%',
+    height: 50,
+    justifyContent:'center',
+    alignItems:'center',
+    padding: 5,
+    marginTop: 23
+  },
   containerLetsShop:{
     width: '100%',
     height: '100%',
@@ -129,4 +142,12 @@ export const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems: 'center'
   },
+  text:{
+    color: colors.gray,
+    fontSize: 25
+  },
+  numText:{
+    color: colors.green,
+    fontSize: 30
+  }
 });

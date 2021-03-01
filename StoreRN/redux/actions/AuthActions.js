@@ -5,6 +5,9 @@ import {
   SIGN_IN,
   SIGN_IN_FAILURE,
   SIGN_IN_SUCCESS,
+  LOG_OUT,
+  LOG_OUT_FAILURE,
+  LOG_OUT_SUCCESS,
 } from './types';
 import auth from '@react-native-firebase/auth';
 function signUp() {
@@ -85,3 +88,35 @@ export const signInFunction = (email, password) => {
       });
   };
 };
+
+function logOut() {
+  return {
+    type: LOG_OUT,
+  };
+}
+
+function logOutSuccess() {
+  return {
+    type: LOG_OUT_SUCCESS,
+  };
+}
+
+function logOutFailure(error) {
+  return {
+    type: LOG_OUT_FAILURE,
+    payload: error,
+  };
+}
+
+export function logoutFunction() {
+  return (dispatch) => {
+    dispatch(logOut());
+    auth()
+      .signOut()
+      .then(() => {
+        console.log('User signed out!');
+        dispatch(logOutSuccess());
+      })
+      .catch((err) => dispatch(logOutFailure(err.message)));
+  };
+}
