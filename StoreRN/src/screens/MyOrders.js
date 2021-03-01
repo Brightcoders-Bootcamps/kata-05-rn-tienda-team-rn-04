@@ -43,7 +43,7 @@ const MyOrder = ({navigation, Products, createOrderFunction}) => {
             style={ItemStyles.checkOutBtn}
             onPress={() => {
               createOrderFunction(order);
-              //navigation.navigate('OrderPlaced');
+              navigation.navigate('OrderPlaced');
             }}>
             <Text style={ItemStyles.textBtnCheckout}>
               {Constants.checkOutTitle}

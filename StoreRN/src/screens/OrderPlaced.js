@@ -1,25 +1,36 @@
-import React from 'react';
-import {View, Text, ImageBackground, Image} from 'react-native';
+import React, {useState} from 'react';
+import {
+  View,
+  Text,
+  ImageBackground,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import {HomeStyles, ItemStyles, Constants} from '../utils/GeneralApp';
-import {colors} from '../utils/colors';
 import {styles} from '../utils/Auth';
 import Bottom from '../components/HomeComponents/Bottom';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import ItemList from '../components/HomeComponents/ItemsListMyOrder';
 
 const OrderPlaced = ({navigation}) => {
+  const [num] = useState(Math.floor(Math.random() * 10 + 1));
   return (
-    <View style={[HomeStyles.homeContainer,{}]}>
+    <View style={[HomeStyles.homeContainer]}>
       <View>
         <ImageBackground
           source={require('./../utils/Images/supermarket.jpeg')}
-          style={HomeStyles.homeBackground}></ImageBackground>
-          <View style={[ItemStyles.itemContainer, {marginTop: '30%'}]}>
-              <View style={styles.containerLogo}>
-                <Image  source={require('../utils/Images/store.png')} style={styles.imageStart}/>
-              </View>
-           <Text>{Constants.orderPlaced}</Text>
-           <Text>{Constants.orderNumber}</Text>
+          style={HomeStyles.homeBackground}
+        />
+        <View style={[ItemStyles.itemContainer, {marginTop: '25%'}]}>
+          <View style={{marginTop: -70, marginBottom: 200}}>
+            <Image
+              source={require('../utils/Images/store.png')}
+              style={styles.imageStart}
+            />
+          </View>
+          <Text style={styles.text}>{Constants.orderPlaced}</Text>
+          <Text style={styles.text}>{Constants.orderNumber}</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+            <Text style={styles.numText}>#{num}</Text>
+          </TouchableOpacity>
         </View>
         <Bottom />
       </View>

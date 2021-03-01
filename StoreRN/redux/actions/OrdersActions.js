@@ -3,6 +3,9 @@ import {
   CREATE_ORDER,
   CREATE_ORDER_FAILURE,
   CREATE_ORDER_SUCCESS,
+  GET_ORDERS,
+  GET_ORDERS_FAILURE,
+  GET_ORDERS_SUCCESS,
 } from './types';
 import {clearProducts} from './ProductsActions';
 function createOrder() {
@@ -36,5 +39,37 @@ export function createOrderFunction(order) {
     } catch (error) {
       dispatch(createOrderFailure(error.msg));
     }
+  };
+}
+
+function getOrders() {
+  return {
+    type: GET_ORDERS,
+  };
+}
+function getOrdersSuccess(orders) {
+  return {
+    type: GET_ORDERS_SUCCESS,
+    payload: orders,
+  };
+}
+function getOrdersFailure(msg) {
+  return {
+    type: GET_ORDERS_FAILURE,
+    payload: msg,
+  };
+}
+
+export function getOrdersFunction(userId) {
+  return (dispatch) => {
+    dispatch(getOrders());
+    firestore()
+      .collection('Order')
+      .where('UserId', '==', userId)
+      .get()
+      .then((querySnapshot) => {
+        dispatch(getOrdersSuccess(querySnapshot.docs));
+      })
+      .catch((err) => dispatch(getOrdersFailure(err.msg)));
   };
 }

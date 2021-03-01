@@ -23,7 +23,6 @@ const Home = ({navigation}) => {
         <View style={ItemStyles.itemContainer}>
           <ItemList navigation={navigation} />
         </View>
-
         <Bottom />
       </View>
     </View>

@@ -142,4 +142,12 @@ export const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems: 'center'
   },
+  text:{
+    color: colors.gray,
+    fontSize: 25
+  },
+  numText:{
+    color: colors.green,
+    fontSize: 30
+  }
 });
